@@ -1,5 +1,4 @@
-FROM golang:1.15-alpine AS builder
-RUN apk add --update --no-cache git
+FROM golang:1.15 AS builder
 WORKDIR /src
 COPY ./go.* ./
 RUN go mod download
